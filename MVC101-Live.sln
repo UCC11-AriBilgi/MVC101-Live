@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_Controllers", "P03_Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04_Views", "P04_Views\P04_Views.csproj", "{F3FA27DC-4256-42E2-8EF0-204B2DC6E51E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05_PassingDataToViews", "P05_PassingDataToViews\P05_PassingDataToViews.csproj", "{A943B082-BF65-4931-9EC7-A0A27F701183}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F3FA27DC-4256-42E2-8EF0-204B2DC6E51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3FA27DC-4256-42E2-8EF0-204B2DC6E51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3FA27DC-4256-42E2-8EF0-204B2DC6E51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A943B082-BF65-4931-9EC7-A0A27F701183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A943B082-BF65-4931-9EC7-A0A27F701183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A943B082-BF65-4931-9EC7-A0A27F701183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A943B082-BF65-4931-9EC7-A0A27F701183}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
