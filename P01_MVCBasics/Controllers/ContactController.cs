@@ -6,6 +6,7 @@ namespace P01_MVCBasics.Controllers
     {
         public IActionResult Index()
         {
+
             return View();
         }
     }
