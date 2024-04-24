@@ -9,12 +9,12 @@
 }
 
 <p>
-    @result
+    @result @* Mesaj ekrana yazılıyor *@
 </p>
 <br />
 <hr />
 @* Do-While döngüsü *@
-
+<h3>Do-While</h3>
 @{
     var sayac = 0;
 
@@ -27,4 +27,28 @@
 }
 <br />
 <hr />
+<h3>Arrays</h3>
+@{
+    string[] uyeler = { "Üye1", "Üye2", "Üye3", "Üye4", "Üye5" };
 
+    // Belirlenen bir üyenin hangi indexde bulunduğu
+    int index = Array.IndexOf(uyeler, "Üye4");
+
+    // dizimin tüm boyutu
+    int boyut = uyeler.Length;
+
+    // belirlenen bir indexdeki elemanın içeriği..
+
+    string uye = uyeler[3];
+}
+@foreach (var eleman in uyeler)
+{
+    <p><b>Üye Adı : </b>@eleman</p>
+
+}
+<br />
+<p>Üye listesinin eleman sayısı : @boyut</p>
+<p>3. indexdeki eleman : @uye</p>
+<p>Üye4 isimli üye @index inci sırada</p>
+<br />
+<hr />
