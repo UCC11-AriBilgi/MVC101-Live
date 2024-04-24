@@ -52,3 +52,54 @@
 <p>Üye4 isimli üye @index inci sırada</p>
 <br />
 <hr />
+<h3>Switch-Case</h3>
+@{
+    var weekday = DateTime.Now.DayOfWeek;
+    var day = weekday.ToString();
+    var message = "";
+}
+<p>Switch Case yapısı devreye giriyor.</p>
+@{
+    switch (day)
+    {
+        case "Monday":
+            message = "Sendrom günü";
+            break;
+        case "Tuesday":
+            message = "Bugün sallanıyor";
+            break;
+        case "Wednesday":
+            message = "Bugün seller var";
+            break;
+        case "Thursday":
+            message = "Bugün perişan";
+            break;
+        case "Friday":
+            message = "Ohh be günü";
+            break;
+        case "Saturday":
+            message = "Bugün mahalle pazarı var";
+            break;
+        case "Sunday":
+            message = "Bugün relax günü";
+            break;
+
+
+        default:
+            message = "Bilemedim";
+            break;
+    }
+}
+
+<p>@message</p>
+<br />
+<hr />
+
+
+
+
+
+
+
+
+
