@@ -25,7 +25,7 @@ namespace P05_PassingDataToViews.Controllers
             carlist.Add(new Cars() { CarId = 4, BrandName = "Ferrari", Family = "California", Year = 2022 });
             carlist.Add(new Cars() { CarId = 5, BrandName = "Dodge", Family = "Charger SRT 8", Year = 1970 });
 
-            ViewBag.Message = "Bu bilgi Viewbag ile taşınan bir veridir";
+            ViewBag.Message = "Bu bilgi Viewbag ile taşınan bir veridir. Oluşan listeyi direkt olarak View sayfasına yönlendirmektedir.";
 
 
             return View(carlist);
