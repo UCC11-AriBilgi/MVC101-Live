@@ -94,7 +94,22 @@
 <p>@message</p>
 <br />
 <hr />
-
+@{
+    var fiyat = 40;
+}
+<h3>if else yapısı</h3>
+@{
+    if (fiyat > 50)
+    {
+        <p>Fiyat kontrol değerinden büyüktür</p>
+    }
+    else
+    {
+        <p>Fiyat kontrol değerinden küçüktür.</p>
+    }
+}
+<br />
+<p>Tanımlanmış olan fiyat : @fiyat</p>
 
 
 

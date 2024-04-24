@@ -1,0 +1,53 @@
+﻿@model IEnumerable<P07_MVCSample.Models.Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Araba Listesi</h1>
+
+<p>
+    <a asp-action="Create">Yeni araba</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CarId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Family)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => car.CarId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.Family)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => car.Year)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
