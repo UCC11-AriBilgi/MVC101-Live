@@ -43,9 +43,9 @@
                 @Html.DisplayFor(modelItem => car.Year)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Güncelle", "Edit", new { id=car.CarId }) |
+                @Html.ActionLink("Detaylar", "Details", new { id=car.CarId }) |
+                @Html.ActionLink("Sil", "Delete", new { id=car.CarId })
             </td>
         </tr>
 }
