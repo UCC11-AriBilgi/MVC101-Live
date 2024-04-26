@@ -57,7 +57,7 @@ namespace P07_MVCSample.Controllers
         {
             // Edit view tarafından gönderilecek olan Datalar ilgili kayıt bulunarak güncellenecek
 
-            Car editcar=CarData.Cars.Where(c=> c.CarId==car.CarId).FirstOrDefault();
+            Car editcar=CarData.Cars.Where(c=> c.CarId==car.CarId).FirstOrDefault(); // Kayıdı buluyor
 
             // Yeni gelen bilgilerin listem üzerinde güncellenmesi
 
