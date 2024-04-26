@@ -83,7 +83,7 @@ namespace P07_MVCSample.Controllers
         {
             // Delete View tarafından gönderilecek id bilgisine göre ilgili kaydı öğrenerek post ile bu metoda gelecek
 
-            Car deletecar=CarData.Cars.Where(c=> c.CarId == car.CarId).FirstOrDefault(); // silinecek kayıdı buldu
+            Car deletecar = CarData.Cars.Where(c => c.CarId == car.CarId).FirstOrDefault(); // silinecek kayıdı buldu
 
             CarData.Cars.Remove(deletecar);
 
