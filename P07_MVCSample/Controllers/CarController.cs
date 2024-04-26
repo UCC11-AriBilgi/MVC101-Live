@@ -53,19 +53,41 @@ namespace P07_MVCSample.Controllers
 
         //POST
         [HttpPost]
-        public IActionResult Edit()
+        public IActionResult Edit(Car car)
         {
-            // Listeleme yapacak
+            // Edit view tarafından gönderilecek olan Datalar ilgili kayıt bulunarak güncellenecek
 
-            return View(); // CarData içersindeki varolan bilgiyi Index View üzerine gönder
+            Car editcar=CarData.Cars.Where(c=> c.CarId==car.CarId).FirstOrDefault();
+
+            // Yeni gelen bilgilerin listem üzerinde güncellenmesi
+
+            editcar.BrandName=car.BrandName;
+            editcar.Family=car.Family;
+            editcar.Year=car.Year;
+
+            return RedirectToAction("Index"); // CarData içersindeki varolan bilgiyi Index View üzerine gönder
         }
 
-
-        public IActionResult Delete()
+        // GET
+        public IActionResult Delete(int id)
         {
-            // Listeleme yapacak
+            // Burası View tarafında gösterilen id bilgisine göre ilgili kaydı silme onayı almak için Delete view a gönderecek.
 
-            return View(); // CarData içersindeki varolan bilgiyi Index View üzerine gönder
+            var car=CarData.Cars.Where(c=> c.CarId==id).FirstOrDefault();
+
+            return View(car); // CarData içersindeki varolan bilgiyi Delete View üzerine gönder
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Car car)
+        {
+            // Delete View tarafından gönderilecek id bilgisine göre ilgili kaydı öğrenerek post ile bu metoda gelecek
+
+            Car deletecar=CarData.Cars.Where(c=> c.CarId == car.CarId).FirstOrDefault(); // silinecek kayıdı buldu
+
+            CarData.Cars.Remove(deletecar);
+
+            return RedirectToAction("Index"); // CarData içersindeki varolan bilgiyi Index View üzerine gönder
         }
     }
 }
